@@ -11,9 +11,7 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK 17
@@ -23,9 +21,9 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Compile
-        run: mvn -B install --file pom.xml -DskipTests
+        run: mvn -B install -pl app -am -DskipTests
       - name: Build Docker Image
-        run: mvn spring-boot:build-image -DskipTests -f app -am
+        run: mvn spring-boot:build-image -DskipTests -pl app -am
       - name: Login to DockerHub Registry
         run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
       - name: Push the latest Docker image
