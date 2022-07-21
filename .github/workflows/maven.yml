@@ -23,6 +23,6 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Compile
-        run: mvn -B install --file app/pom.xml -DskipTests -am
+        run: mvn -B install --file pom.xml -DskipTests
       - name: Build Docker Image
         run: mvn spring-boot:build-image -DskipTests -f app -am
