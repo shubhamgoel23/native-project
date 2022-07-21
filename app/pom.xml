@@ -97,7 +97,7 @@
                             <BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>
                             <BPE_DELIM_JAVA_TOOL_OPTIONS xml:space="preserve"> </BPE_DELIM_JAVA_TOOL_OPTIONS>
                             <BPE_APPEND_JAVA_TOOL_OPTIONS>-Djava.security.egd=file:/dev/./urandom</BPE_APPEND_JAVA_TOOL_OPTIONS>
-                            <BP_BINARY_COMPRESSION_METHOD>gzexe</BP_BINARY_COMPRESSION_METHOD>
+                            <BP_BINARY_COMPRESSION_METHOD>upx</BP_BINARY_COMPRESSION_METHOD>
                         </env>
                         <buildCache>
                             <volume>
