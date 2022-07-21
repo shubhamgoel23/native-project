@@ -7,9 +7,9 @@
         <artifactId>parent</artifactId>
         <version>0.0.1</version>
     </parent>
-    <artifactId>config</artifactId>
-    <name>configuration</name>
-    <description>Native Configuration</description>
+    <artifactId>util</artifactId>
+    <name>utility</name>
+    <description>Native utility</description>
 
     <properties>
         <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
@@ -18,11 +18,7 @@
         </sonar.coverage.exclusions>
     </properties>
     <dependencies>
-        <dependency>
-            <groupId>com.project</groupId>
-            <artifactId>util</artifactId>
-            <version>${project.version}</version>
-        </dependency>
+
     </dependencies>
 
     <build>

@@ -15,6 +15,7 @@
 	<description>Parent POM for native project</description>
 	<packaging>pom</packaging>
 	<modules>
+		<module>util</module>
 		<module>config</module>
 		<module>app</module>
 	</modules>
@@ -30,8 +31,14 @@
 		<maven-surefire-plugin.version>3.0.0-M7</maven-surefire-plugin.version>
 		<maven-pmd-plugin.version>3.17.0</maven-pmd-plugin.version>
 		<jacoco.version>0.8.8</jacoco.version>
+		<owasp-html-sanitizer.version>20220608.1</owasp-html-sanitizer.version>
 	</properties>
 	<dependencies>
+		<dependency>
+			<groupId>com.googlecode.owasp-java-html-sanitizer</groupId>
+			<artifactId>owasp-java-html-sanitizer</artifactId>
+			<version>${owasp-html-sanitizer.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>org.mapstruct</groupId>
 			<artifactId>mapstruct</artifactId>
